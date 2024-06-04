@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <aside class="left-container">
+            <div class="left-logo">
+                <h1>LOGO</h1>
+            </div>
+        </aside>
+        <section class="wrapper">
+            <div class="info-container">
+                <h1>Welcome to our Shopping site!</h1>
+                <p>Once you sign up you can subscribe to be a member, getting discound up to 40% every month!</p>
+            </div>
+            <form action="" class="form-form" onsubmit="return validateForm()">
+                <h2>Create your account!</h2>
+                <div class="box-input">
+                    <label for="name">Name</label>
+                    <input type="text" maxlength="100" id="name" placeholder="Jon" required>
+                </div>
+                <div class="box-input">
+                    <label for="lastname">Last name</label>
+                    <input type="text" maxlength="100" id="lastname" placeholder="Doe" required>
+                </div>
+                <div class="box-input">
+                    <label for="email">Email</label>
+                    <input type="email" maxlength="50" id="email" placeholder="Jon@example.com" required>
+                </div>
+                <div class="box-input">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" placeholder="00000000000" pattern="[0-9]{10,15}" required>
+                </div>
+                <div class="box-input">
+                    <label for="password">Password</label>
+                    <input type="password" minlength="8" maxlength="100" id="password" placeholder="*********" required>
+                </div>
+                <div class="box-input">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" required>
+                </div>
+
+                <div class="button-login__container">
+                    <button type="submit" class="button-form">SEND</button>
+                    <p>Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
