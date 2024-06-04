@@ -114,6 +114,7 @@
     
     .form-form h2{
         grid-column: span 2;
+        font-size: clamp(1.3em, 3vw, 4em);
     }
 
     .box-input{
@@ -167,6 +168,22 @@
 
 
 /*media queries*/
-
+@media screen and (max-width: 790px){
+    main{
+        flex-direction: column;
+    }
+    .info-container{
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width: 485px){
+    .form-form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
 /*Section ends*/
     
